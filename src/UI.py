@@ -3,11 +3,40 @@ import operation
 
 class CalculatorUI:
 
+    def run(self):
+        self.display_operations()
+        op : operation = self.get_operation()
+        if op == operation.Exit:
+            return
+        else:
+            self.perform_operation(op)
+            self.run()
+
+    def perform_operation(op: operation):
+
+        match op:
+            case operation.Add:
+                pass
+            case operation.Subtract:
+                pass
+            case operation.Multiply:
+                pass
+            case operation.Divide:
+                pass
+            case operation.Factorial:
+                pass
+            case operation.Exit:
+                pass
+        pass
+
+
     def display_operations(self):
         print("1. Add")
         print("2. Subtract")
         print("3. Multiply")
         print("4. Divide")
+        print("5. Factorial")
+        print("6. Exit")
 
     def get_operation(self)->operation:
         
